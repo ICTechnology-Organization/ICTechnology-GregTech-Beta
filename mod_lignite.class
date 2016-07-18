@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_lignite extends BaseMod{
+ 
+    public static Block oreLignite;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_lignite()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/lignite.png";
+　　　　
+    	oreLignite = new BlockLignite(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreLignite.setHardness(3F);
+　　　　
+    	oreLignite.setBlockName("oreLignite");
+　　　　
+    	oreLignite.setResistance(5F);
+　　　　
+    	oreLignite.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreLignite.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreLignite);
+　　　　
+        ModLoader.addName(oreLignite, "Lignite Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
