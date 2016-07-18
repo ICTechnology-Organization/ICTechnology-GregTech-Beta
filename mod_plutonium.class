@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_plutonium extends BaseMod{
+ 
+    public static Block orePlutonium;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_plutonium()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/plutonium.png";
+　　　　
+    	orePlutonium = new BlockPlutonium(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	orePlutonium.setHardness(3F);
+　　　　
+    	orePlutonium.setBlockName("orePlutonium");
+　　　　
+    	orePlutonium.setResistance(5F);
+　　　　
+    	orePlutonium.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	orePlutonium.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(orePlutonium);
+　　　　
+        ModLoader.addName(orePlutonium, "Plutonium Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
