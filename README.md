@@ -1,6 +1,6 @@
 # ICTechnology-GregTech-Beta
 <P>
-![IC2](https://hydra-media.cursecdn.com/minecraft-ru.gamepedia.com/f/f5/Logo_IC2.png?version=55c06a00ed7e6a4b238fccf7d42a43c2 "ReadmeImage01")
+![IC2](https://github.com/ICTechnology-Organization/ICTechnology-GregTech-Beta/blob/master/LogoFactory.jpg "ReadmeImage01")
 <P>
 Install
 <P>
