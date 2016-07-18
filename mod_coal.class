@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_coal extends BaseMod{
+ 
+    public static Block oreCoal;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_coal()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/coal.png";
+　　　　
+    	oreCoal = new BlockCoal(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreCoal.setHardness(3F);
+　　　　
+    	oreCoal.setBlockName("oreCoal");
+　　　　
+    	oreCoal.setResistance(5F);
+　　　　
+    	oreCoal.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreCoal.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreCoal);
+　　　　
+        ModLoader.addName(oreCoal, "Coal Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
