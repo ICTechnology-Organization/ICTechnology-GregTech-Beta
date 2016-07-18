@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_molybdenum extends BaseMod{
+ 
+    public static Block oreMolybdenum;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_molybdenum()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/molybdenum.png";
+　　　　
+    	oreMolybdenum = new BlockMolybdenum(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreMolybdenum.setHardness(3F);
+　　　　
+    	oreMolybdenum.setBlockName("oreMolybdenum");
+　　　　
+    	oreMolybdenum.setResistance(5F);
+　　　　
+    	oreMolybdenum.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreMolybdenum.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreMolybdenum);
+　　　　
+        ModLoader.addName(oreMolybdenum, "Molybdenum Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
