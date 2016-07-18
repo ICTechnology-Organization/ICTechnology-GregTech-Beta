@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_manganese extends BaseMod{
+ 
+    public static Block oreManganese;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_manganese()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/manganese.png";
+　　　　
+    	oreManganese = new BlockManganese(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreManganese.setHardness(3F);
+　　　　
+    	oreManganese.setBlockName("oreManganese");
+　　　　
+    	oreManganese.setResistance(5F);
+　　　　
+    	oreManganese.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreManganese.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreManganese);
+　　　　
+        ModLoader.addName(oreManganese, "Manganese Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
