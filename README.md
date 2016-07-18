@@ -1,5 +1,7 @@
 # ICTechnology-GregTech-Beta
 <P>
+![ICTechnology](http://i.imgur.com/Jjwsc.jpg "ReadmeImage01")
+<P>
 Install
 <P>
 1.Download [Minecraft Forge 3.4.9.171](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.2.5.html)
