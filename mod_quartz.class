@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_quartz extends BaseMod{
+ 
+    public static Block oreQuartz;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_quartz()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/quartz.png";
+　　　　
+    	oreQuartz = new BlockQuartz(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreQuartz.setHardness(3F);
+　　　　
+    	oreQuartz.setBlockName("oreQuartz");
+　　　　
+    	oreQuartz.setResistance(5F);
+　　　　
+    	oreQuartz.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreQuartz.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreQuartz);
+　　　　
+        ModLoader.addName(oreQuartz, "Quartz Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
