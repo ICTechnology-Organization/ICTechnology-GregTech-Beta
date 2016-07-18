@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_olivine extends BaseMod{
+ 
+    public static Block oreOlivine;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_olivine()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/olivine.png";
+　　　　
+    	oreOlivine = new BlockOlivine(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreOlivine.setHardness(3F);
+　　　　
+    	oreOlivine.setBlockName("oreOlivine");
+　　　　
+    	oreOlivine.setResistance(5F);
+　　　　
+    	oreOlivine.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreOlivine.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreOlivine);
+　　　　
+        ModLoader.addName(oreOlivine, "Olivine Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
