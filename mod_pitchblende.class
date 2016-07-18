@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_pitchblende extends BaseMod{
+ 
+    public static Block orePitchblende;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_pitchblende()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/pitchblende.png";
+　　　　
+    	orePitchblende = new BlockPitchblende(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	orePitchblende.setHardness(3F);
+　　　　
+    	orePitchblende.setBlockName("orePitchblende");
+　　　　
+    	orePitchblende.setResistance(5F);
+　　　　
+    	orePitchblende.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	orePitchblende.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(orePitchblende);
+　　　　
+        ModLoader.addName(orePitchblende, "Pitchblende Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
