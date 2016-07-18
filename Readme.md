@@ -2,6 +2,7 @@
 <P>
 ![IC2](https://github.com/ICTechnology-Organization/ICTechnology-GregTech-Beta/blob/master/LogoFactory.jpg "ReadmeImage01")
 <P>
+##WANING World Genelating Time on Up!
 Install
 <P>
 1.Download [Minecraft Forge 3.4.9.171](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.2.5.html)
