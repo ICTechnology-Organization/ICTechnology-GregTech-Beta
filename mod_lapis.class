@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_lapis extends BaseMod{
+ 
+    public static Block oreLapis;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_lapis()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/lapis.png";
+　　　　
+    	oreLapis = new BlockLapis(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreLapis.setHardness(3F);
+　　　　
+    	oreLapis.setBlockName("oreLapis");
+　　　　
+    	oreLapis.setResistance(5F);
+　　　　
+    	oreLapis.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreLapis.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreLapis);
+　　　　
+        ModLoader.addName(oreLapis, "Lapis Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
