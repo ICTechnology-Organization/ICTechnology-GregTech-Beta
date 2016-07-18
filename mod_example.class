@@ -1,0 +1,60 @@
+package net.minecraft.src;
+ 
+public class mod_hoge extends BaseMod{
+ 
+    public static Block oreHoge;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_hoge()
+    {
+    }
+    public void load()
+    {
+    	blockID = 120;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/hoge.png";
+　　　　/*
+　　　　　BlockHogeクラスから新規BlockのIDとテクスチャファイルを指定
+　　　　　blockID:追加するBlockのIDを指定　ここでは120として定義
+　　　　　fileToOverride：GUIインベントリを使用しない場合は"/terrain.png"
+　　　　　　　　　　　　　GUIインベントリを使用する場合は"/gui/items.png"
+　　　　　textureFilePath：テクスチャの参照ファイルパスを指定
+　　　　*/
+    	oreHoge = new BlockHoge(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　/*
+　　　　　setHardness:対象Blockの硬さをFloatで指定　デフォルトは3F
+　　　　*/
+    	oreHoge.setHardness(3F);
+　　　　/*
+　　　　　setBlockName:対象Blockの名前を指定
+　　　　*/
+    	oreHoge.setBlockName("oreHoge");
+　　　　/*
+　　　　　setResistance：対象Blockの爆破耐性をFloatで指定　デフォルトは5F
+　　　　*/
+    	oreHoge.setResistance(5F);
+　　　　/*
+　　　　　setStepSound：対象Blockの上を歩いた際の音を指定
+　　　　　下記では石の上を歩いた場合と同じ音を参照
+　　　　*/
+    	oreHoge.setStepSound(Block.soundStoneFootstep);
+　　　　/*
+　　　　　setLightValue：対象ブロックを発光させる場合、明るさをFloatで指定
+　　　　*/
+    	oreHoge.setLightValue(1.0F);
+　　　　/*
+　　　　　ModLoader.registerBlock：指定したBlockデータを登録します。
+　　　　*/
+    	ModLoader.registerBlock(oreHoge);
+　　　　/*
+　　　　　ModLOader.addName：Minecraftで表示させるBlockの名前を指定
+　　　　*/
+        ModLoader.addName(oreHoge, "Hoge Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
