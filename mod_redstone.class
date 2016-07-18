@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_redstone extends BaseMod{
+ 
+    public static Block oreRedstone;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_redstone()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/redstone.png";
+　　　　
+    	oreRedstone = new BlockRedstone(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreRedstone.setHardness(3F);
+　　　　
+    	oreRedstone.setBlockName("oreRedstone");
+　　　　
+    	oreRedstone.setResistance(5F);
+　　　　
+    	oreRedstone.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreRedstone.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreRedstone);
+　　　　
+        ModLoader.addName(oreRedstone, "Redstone Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
