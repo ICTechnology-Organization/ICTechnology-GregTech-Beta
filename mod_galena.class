@@ -1,36 +1,36 @@
 package net.minecraft.src;
  
-public class mod_gold extends BaseMod{
+public class mod_galena extends BaseMod{
  
-    public static Block oreGold;
+    public static Block oreGalena;
     public int blockID;
     public String fileToOverride;
     public String textureFilePath;
  
-    public mod_gold()
+    public mod_galena()
     {
     }
     public void load()
     {
     	blockID = ;
     	fileToOverride = "/terrain.png";
-    	textureFilePath = "/block/gold.png";
+    	textureFilePath = "/block/galena.png";
 　　　　
-    	oreGold = new BlockGold(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+    	oreGalena = new BlockGalena(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
 　　　　
-    	oreGold.setHardness(3F);
+    	oreGalena.setHardness(3F);
 　　　　
-    	oreGold.setBlockName("oreGold");
+    	oreGalena.setBlockName("oreGalena");
 　　　　
-    	oreGold.setResistance(5F);
+    	oreGalena.setResistance(5F);
 　　　　
-    	oreGold.setStepSound(Block.soundStoneFootstep);
+    	oreGalena.setStepSound(Block.soundStoneFootstep);
 　　　　
-    	oreGold.setLightValue(1.0F);
+    	oreGalena.setLightValue(1.0F);
 　　　　
-    	ModLoader.registerBlock(oreGold);
+    	ModLoader.registerBlock(oreGalena);
 　　　　
-        ModLoader.addName(oreGold, "Gold Ore");
+        ModLoader.addName(oreGalena, "Galena Ore");
     }
     public String getVersion()
     {
