@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_naquadah extends BaseMod{
+ 
+    public static Block oreNaquadah;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_naquadah()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/naquadah.png";
+　　　　
+    	oreNaquadah = new BlockBauxite(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreNaquadah.setHardness(3F);
+　　　　
+    	oreNaquadah.setBlockName("oreNaquadah");
+　　　　
+    	oreNaquadah.setResistance(5F);
+　　　　
+    	oreNaquadah.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreNaquadah.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreNaquadah);
+　　　　
+        ModLoader.addName(oreNaquadah, "Naquadah Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
