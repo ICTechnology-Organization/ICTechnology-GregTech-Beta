@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_gold extends BaseMod{
+ 
+    public static Block oreGold;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_gold()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/gold.png";
+　　　　
+    	oreGold = new BlockGold(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreGold.setHardness(3F);
+　　　　
+    	oreGold.setBlockName("oreGold");
+　　　　
+    	oreGold.setResistance(5F);
+　　　　
+    	oreGold.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreGold.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreGold);
+　　　　
+        ModLoader.addName(oreGold, "Gold Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
