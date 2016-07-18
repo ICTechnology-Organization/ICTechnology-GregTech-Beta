@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_diamond extends BaseMod{
+ 
+    public static Block oreDiamond;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_diamond()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/diamond.png";
+　　　　
+    	oreDiamond = new BlockDiamond(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreDiamond.setHardness(3F);
+　　　　
+    	oreDiamond.setBlockName("oreDiamond");
+　　　　
+    	oreDiamond.setResistance(5F);
+　　　　
+    	oreDiamond.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreDiamond.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreDiamond);
+　　　　
+        ModLoader.addName(oreDiamond, "Diamond Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
