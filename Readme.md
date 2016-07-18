@@ -2,8 +2,7 @@
 <P>
 ![IC2](https://github.com/ICTechnology-Organization/ICTechnology-GregTech-Beta/blob/master/LogoFactory.jpg "ReadmeImage01")
 <P>
-##WANING World Genelating Time on Up!
-Install
+##Install
 <P>
 1.Download [Minecraft Forge 3.4.9.171](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.2.5.html)
 <P>
@@ -26,3 +25,7 @@ Install
 10.Install ICTecnology
 <P>
 11.Play Minecraft 1.2.5
+
+##Readme Modder
+Bug report & Create cooperation
+[GitHub](http://github.com/ICTechnology-Organization/ICTechnology-Gregtech-Beta)
