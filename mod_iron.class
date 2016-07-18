@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_iron extends BaseMod{
+ 
+    public static Block oreIron;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_iron()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/iron.png";
+　　　　
+    	oreIron = new BlockIron(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreIron.setHardness(3F);
+　　　　
+    	oreIron.setBlockName("oreIron");
+　　　　
+    	oreIron.setResistance(5F);
+　　　　
+    	oreIron.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreIron.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreIron);
+　　　　
+        ModLoader.addName(oreIron, "Iron Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
