@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_platinum extends BaseMod{
+ 
+    public static Block orePlatinum;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_Platinum()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/platinum.png";
+　　　　
+    	orePlatinum = new BlockPlatinum(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	orePlatinum.setHardness(3F);
+　　　　
+    	orePlatinum.setBlockName("orePlatinum");
+　　　　
+    	orePlatinum.setResistance(5F);
+　　　　
+    	orePlatinum.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	orePlatinum.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(orePlatinum);
+　　　　
+        ModLoader.addName(orePlatinum, "Platinum Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
