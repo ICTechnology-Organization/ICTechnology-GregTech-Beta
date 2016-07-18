@@ -1,0 +1,33 @@
+package net.minecraft.src;
+ 
+import java.util.Random;
+ 
+public class BlockHoge extends Block
+{
+　　/*
+　　親クラスを初期化する必要があるため定義
+　　*/
+　　public BlockHoge(int i, int j)
+　　{
+　　　　/*
+　　　　Material.rock：石と同じ処理をさせる定義をしているだけです。
+　　　　*/
+	super(i, j, Material.rock);
+　　}
+    /*
+　　ブロックが破壊された時にドロップするものを設定
+　　returnでthis.blockIDなので同じ物をドロップさせています
+　　*/
+　　public int idDropped(int i, Random random, int j)
+    {
+        return this.blockID;
+    }
+    /*
+　　上記破壊時のドロップアイテムの個数を指定
+　　returnで1個ドロップするように指定しています。
+　　*/
+　　public int quantityDropped(Random random)
+    {
+        return 1;
+    }
+}
