@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_copper extends BaseMod{
+ 
+    public static Block oreCopper;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_copper()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/copper.png";
+　　　　
+    	oreCopper = new BlockCopper(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreCopper.setHardness(3F);
+　　　　
+    	oreCopper.setBlockName("oreCopper");
+　　　　
+    	oreCooper.setResistance(5F);
+　　　　
+    	oreCopper.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreCopper.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreCopper);
+　　　　
+        ModLoader.addName(oreCopper, "Copper Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
