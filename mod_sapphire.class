@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_sapphire extends BaseMod{
+ 
+    public static Block oreSapphire;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_sapphire()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/sapphire.png";
+　　　　
+    	oreSapphire = new BlockSapphire(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreSapphire.setHardness(3F);
+　　　　
+    	oreSapphire.setBlockName("oreSapphire");
+　　　　
+    	oreSapphire.setResistance(5F);
+　　　　
+    	oreSapphire.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreSapphire.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreSapphire);
+　　　　
+        ModLoader.addName(oreSapphire, "Sapphire Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
