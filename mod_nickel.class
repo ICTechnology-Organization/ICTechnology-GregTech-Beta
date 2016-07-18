@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_nickel extends BaseMod{
+ 
+    public static Block oreNickel;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_nickel()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/nickel.png";
+　　　　
+    	oreNickel = new BlockNickel(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreNickel.setHardness(3F);
+　　　　
+    	oreNickel.setBlockName("oreNickel");
+　　　　
+    	oreNickel.setResistance(5F);
+　　　　
+    	oreNickel.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreNickel.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreNickel);
+　　　　
+        ModLoader.addName(oreNickel, "Nickel Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
