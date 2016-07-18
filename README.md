@@ -1,8 +1,7 @@
 # ICTechnology-GregTech-Beta
 <P>
-![IC2](https://hydra-media.cursecdn.com/minecraft-ru.gamepedia.com/f/f5/Logo_IC2.png?version=55c06a00ed7e6a4b238fccf7d42a43c2 "ReadmeImage01")
-<P>
 Install
+![IC2](https://hydra-media.cursecdn.com/minecraft-ru.gamepedia.com/f/f5/Logo_IC2.png?version=55c06a00ed7e6a4b238fccf7d42a43c2 "ReadmeImage01")
 <P>
 1.Download [Minecraft Forge 3.4.9.171](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.2.5.html)
 <P>
