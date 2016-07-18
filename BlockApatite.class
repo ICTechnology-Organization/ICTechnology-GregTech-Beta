@@ -17,7 +17,13 @@ public class BlockApatite extends Block
     }
     
 　　public int quantityDropped(Random random)
+　　
     {
         return 1;
+    }
+    
+    public boolean isGenMineableReplaceable(World world, int x, int y, int z)
+    {
+        super(i, j, Material.rock);
     }
 }
