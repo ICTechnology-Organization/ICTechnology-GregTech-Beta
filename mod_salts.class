@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_salts extends BaseMod{
+ 
+    public static Block oreSalts;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_salts()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/salts.png";
+　　　　
+    	oreSalts = new BlockSalts(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreSalts.setHardness(3F);
+　　　　
+    	oreSalts.setBlockName("oreSalts");
+　　　　
+    	oreSalts.setResistance(5F);
+　　　　
+    	oreSalts.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreSalts.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreSalts);
+　　　　
+        ModLoader.addName(oreSalts, "Salts Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
