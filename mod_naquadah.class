@@ -16,7 +16,7 @@ public class mod_naquadah extends BaseMod{
     	fileToOverride = "/terrain.png";
     	textureFilePath = "/block/naquadah.png";
 　　　　
-    	oreNaquadah = new BlockBauxite(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+    	oreNaquadah = new BlockNaquadah(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
 　　　　
     	oreNaquadah.setHardness(3F);
 　　　　
