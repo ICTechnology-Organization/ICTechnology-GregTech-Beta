@@ -1,0 +1,39 @@
+package net.minecraft.src;
+ 
+public class mod_magnetite extends BaseMod{
+ 
+    public static Block oreMagnetite;
+    public int blockID;
+    public String fileToOverride;
+    public String textureFilePath;
+ 
+    public mod_magnetite()
+    {
+    }
+    public void load()
+    {
+    	blockID = ;
+    	fileToOverride = "/terrain.png";
+    	textureFilePath = "/block/magnetite.png";
+　　　　
+    	oreMagnetite = new BlockMagnetite(blockID, ModLoader.addOverride(fileToOverride, textureFilePath));
+　　　　
+    	oreMagnetite.setHardness(3F);
+　　　　
+    	oreMagnetite.setBlockName("oreMagnetite");
+　　　　
+    	oreMagnetite.setResistance(5F);
+　　　　
+    	oreMagnetite.setStepSound(Block.soundStoneFootstep);
+　　　　
+    	oreMagnetite.setLightValue(1.0F);
+　　　　
+    	ModLoader.registerBlock(oreMagnetite);
+　　　　
+        ModLoader.addName(oreMagnetite, "Magnetite Ore");
+    }
+    public String getVersion()
+    {
+            return "1.0.0";
+    }
+}
